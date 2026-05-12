@@ -1,0 +1,100 @@
+/* WRAPPER */
+.AddnewWrapper {
+    min-height: 100vh;
+    background: #0d2137;
+    padding: 40px 5vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* CARD */
+.AddnewWrapper .header {
+    width: 100%;
+    max-width: 600px;
+    background: #122843;
+    border-radius: 14px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* TOP BAR */
+.AddnewWrapper .header h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    color: #c9a84c;
+}
+
+.AddnewWrapper .header > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* FORM */
+.formWrapper {
+    margin-top: 30px;
+}
+
+/* INPUT STYLE */
+.formWrapper input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.05);
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.formWrapper input:focus {
+    border-color: #c9a84c;
+    background: rgba(255,255,255,0.08);
+}
+
+/* FILE INPUT */
+.formWrapper input[type="file"] {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* BUTTON */
+.formWrapper button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #c9a84c;
+    color: #0d2137;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.wrapperContet{
+    display: flex;
+    justify-content: space-between;
+}
+.formWrapper button:hover {
+    background: #e0c06a;
+}
+
+/* BACK BUTTON ALIGN */
+.AddnewWrapper button {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .AddnewWrapper .header {
+        padding: 20px;
+    }
+
+    .AddnewWrapper .header h1 {
+        font-size: 22px;
+    }
+}

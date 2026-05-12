@@ -1,0 +1,150 @@
+/* FORM THEME STYLE */
+
+.FormWrapper{
+    width:400px;
+    padding:35px;
+    background: var(--bg2);
+    border:1px solid var(--border);
+    border-radius:6px;
+    position:relative;
+    z-index:1;
+    margin: auto;
+}
+
+.FormWrapper form{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+/* each field */
+
+.FormWrapper form > div{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+/* label */
+
+.FormWrapper label{
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+}
+
+/* input + select */
+
+.FormWrapper input:not([type="file"]),
+.FormWrapper select,
+.FormWrapper textarea{
+    width:100%;
+    height:52px;
+    padding:0 16px;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:4px;
+    outline:none;
+    font-size:14px;
+    font-family:'DM Mono', monospace;
+    color:var(--text);
+    transition:.25s;
+}
+
+/* textarea */
+
+.FormWrapper textarea{
+    min-height:140px;
+    padding:14px 16px;
+    resize:none;
+}
+
+/* focus */
+
+.FormWrapper input:focus,
+.FormWrapper select:focus,
+.FormWrapper textarea:focus{
+    border-color:rgba(192,98,42,.35);
+    box-shadow:0 0 0 4px rgba(192,98,42,.08);
+    background:var(--bg2);
+}
+
+/* placeholder */
+
+.FormWrapper input::placeholder,
+.FormWrapper textarea::placeholder{
+    color:var(--muted);
+}
+
+/* file input */
+
+.FormWrapper input[type="file"]{
+    width:100%;
+    padding:14px;
+    background:rgba(42,124,192,.04);
+    border:1px dashed rgba(42,124,192,.25);
+    border-radius:4px;
+    color:var(--muted);
+    font-size:13px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.FormWrapper input[type="file"]:hover{
+    border-color:var(--accent3);
+    background:rgba(42,124,192,.08);
+}
+
+/* button */
+
+.FormWrapper button{
+    width:100%;
+    height:54px;
+    border:none;
+    border-radius:4px;
+    background:var(--accent);
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:.25s;
+    margin-top:8px;
+}
+
+.FormWrapper button:hover{
+    background:#a8511f;
+    transform:translateY(-2px);
+}
+
+.FormWrapper button:active{
+    transform:scale(.98);
+}
+
+/* helper text / error */
+
+.FormWrapper small,
+.FormWrapper .error{
+    font-size:11px;
+    color:#d9534f;
+    margin-top:4px;
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+    .FormWrapper{
+        padding:22px;
+    }
+
+    .FormWrapper input:not([type="file"]),
+    .FormWrapper select,
+    .FormWrapper button{
+        height:48px;
+    }
+
+}

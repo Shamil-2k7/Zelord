@@ -1,0 +1,112 @@
+/* WRAPPER */
+.mainWrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d2137, #122843);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* HEADER */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* HEADING */
+.heading h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: #c9a84c;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* FORM CONTAINER */
+.FormWrapper {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 35px 30px;
+    backdrop-filter: blur(10px);
+}
+
+/* INPUT FIELD WRAPPER */
+.FormWrapper input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 0 0 2px rgba(163, 139, 72, 0.2);
+    
+}
+a{
+    color: white;
+}
+a:hover{
+    color: rgb(252, 180, 131);
+
+}
+/* INPUT FOCUS */
+.FormWrapper input:focus {
+    border-color: #c9a84c;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    color: #fff;
+
+}
+
+/* PLACEHOLDER */
+.FormWrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+.FormWrapper input {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* BUTTON */
+.FormWrapper button {
+    width: 100%;
+    padding: 14px;
+    background: #c9a84c;
+    color: #0d2137;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.FormWrapper button:hover {
+    background: #e0c06a;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+    .heading h1 {
+        font-size: 32px;
+    }
+
+    .FormWrapper {
+        padding: 25px 20px;
+    }
+}
+input{
+    color: white;
+}

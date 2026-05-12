@@ -1,0 +1,165 @@
+/* WRAPPER */
+.adminWrapper {
+    min-height: 100vh;
+    background: #0d2137;
+    color: white;
+    padding: 30px 5vw;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* HEADER */
+.adminWrapper header {
+    margin-bottom: 30px;
+}
+
+.headerwrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerwrapper h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    color: #c9a84c;
+}
+
+.headerwrapper span {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+}
+
+/* SECTION */
+.ImageGallary {
+    background: #122843;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* SECTION HEADER */
+.headWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.headWrapper h1 {
+    font-size: 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* TABLE HEAD */
+thead {
+    background: rgba(255,255,255,0.05);
+}
+
+th {
+    text-align: left;
+    padding: 14px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.6);
+}
+
+/* TABLE BODY */
+td {
+    padding: 14px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 14px;
+}
+
+/* IMAGE */
+td img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* VIDEO PREVIEW */
+td video {
+    width: 100px;
+    border-radius: 6px;
+}
+
+/* BUTTON STYLE FIX (if your Button is simple) */
+button {
+    background: #c9a84c;
+    color: #0d2137;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #e0c06a;
+}
+
+/* DELETE BUTTON (optional) */
+button.delete {
+    background: #e05252;
+    color: white;
+}
+
+button.delete:hover {
+    background: #ff6b6b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .headerwrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .headWrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    table, thead, tbody, tr, td, th {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        background: rgba(255,255,255,0.03);
+        margin-bottom: 15px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    td {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #c9a84c;
+    }
+}
