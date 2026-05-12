@@ -24,7 +24,7 @@ export default function Admin() {
     const [reel, setreel] = useState([]);
     const [admin,setadmin]= useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5000/getlist')
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}/getlist`)
             .then(response => {
                 setimage(response.data.images)
                 setreel(response.data.videos)
@@ -39,7 +39,7 @@ export default function Admin() {
     try {
         const token = localStorage.getItem("token");
 
-        await axios.delete(`http://localhost:5000/delete-image/${id}`, {
+        await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/delete-image/${id}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -59,7 +59,7 @@ const handleDeleteVideo = async (id) => {
     try {
         const token = localStorage.getItem("token");
 
-        await axios.delete(`http://localhost:5000/delete-reel/${id}`, {
+        await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/delete-reel/${id}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -103,7 +103,7 @@ const handleDeleteVideo = async (id) => {
                                     <td>{image.ImageName}</td>
                                     <td>
                                         <img
-                                            src={`http://localhost:5000/uploads/${image.File}`}
+                                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${image.File}`}
                                             alt={image.ImageName}
                                             width="100"
                                         />
@@ -137,7 +137,7 @@ const handleDeleteVideo = async (id) => {
                                     <tr key={ index}    >
                                         <td>{image.ReelName}</td>
                                         <td>
-                                            <video controls src={`http://localhost:5000/uploads/${image.File}`}></video>
+                                            <video controls src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${image.File}`}></video>
                                         </td>
                                         <td><Button text={'Delete'} onclick={() => handleDeleteVideo(image._id)} /></td>
                                     </tr>

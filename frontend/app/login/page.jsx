@@ -33,7 +33,7 @@ export default function Login() {
         onSubmit: async (values, { resetForm }) => {
             try {
                 const res = await axios.post(
-                    "http://localhost:5000/login",
+                    `http://localhost:5000/login`,
                     values
                 );
 

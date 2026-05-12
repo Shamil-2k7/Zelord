@@ -45,7 +45,7 @@ export default function AddnewImage() {
                 formData.append("file", values.file);
 
                 const res = await axios.post(
-                    "http://localhost:5000/addimage",
+                    `${process.env.NEXT_PUBLIC_API_URL}/addimage`,
                     formData,
                     {
                         headers: {

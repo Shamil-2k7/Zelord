@@ -15,7 +15,7 @@ export default function Forgotpassword() {
         const token = localStorage.getItem("token");
 
         if (token) {
-            axios.get("http://localhost:5000/admin-data", {
+            axios.get(`${process.env.NEXT_PUBLIC_API_URL}/admin-data`, {
                 headers: {
                     Authorization: `Bearer ${token}`, // ✅ add Bearer
                 },
@@ -45,7 +45,7 @@ export default function Forgotpassword() {
         onSubmit: async (values, { resetForm }) => {
             try {
                 const res = await axios.post(
-                    "http://localhost:5000/send-otp",
+                    `${process.env.NEXT_PUBLIC_API_URL}/send-otp`,
                     values
                 );
 

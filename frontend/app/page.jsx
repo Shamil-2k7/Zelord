@@ -25,7 +25,7 @@ export default function Home() {
     const [reel, setreel] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/getlist')
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}/getlist`)
             .then(response => {
                 setimage(response.data.images)
                 setreel(response.data.videos)
@@ -146,7 +146,7 @@ export default function Home() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            src={`http://localhost:5000/uploads/${img.File}`} 
+                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img.File}`} 
                         />
                     ))}
                 </motion.div>
@@ -176,7 +176,7 @@ export default function Home() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            src={`http://localhost:5000/uploads/${img.File}`} 
+                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img.File}`} 
                         />
                     ))}
                 </motion.div>

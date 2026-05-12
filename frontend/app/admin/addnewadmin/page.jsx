@@ -51,7 +51,7 @@ export default function Addnewadmin() {
                 const token = localStorage.getItem("token");
 
                 const res = await axios.post(
-                    "http://localhost:5000/addadmin",
+                    `${process.env.NEXT_PUBLIC_API_URL}/addadmin`,
                     values,
                     {
                         headers: {

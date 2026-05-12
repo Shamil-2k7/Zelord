@@ -38,7 +38,7 @@ export default function Newpassword() {
         onSubmit: async (values) => {
             try {
                 const res = await axios.post(
-                    "http://localhost:5000/verify-otp", // ✅ correct API
+                    `http://localhost:5000/verify-otp`,
                     {
                         email,
                         otp: values.otp,
